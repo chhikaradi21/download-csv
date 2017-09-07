@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h1>
+        <span class="badge badge-secondary" style="font-size : 30px; margin-bottom : 30px">Download Table Data As CSV</span>
+      </h1>
+    </div>
+
+    <div class="col-md-12">
+      <p> You can download table rows as csv using this utility.
+        And this code can be used in any javascript code or library as main logic function is written in Pure
+        JavaScript.
+      </p>
+    </div>
+
+    <div class="col-md-12">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>City</th>
+          <th>Mobile</th>
+          <th>Age</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of dataArr">
+          <td>{{item.name}}</td>
+          <td>{{item.city}}</td>
+          <td>{{item.mobile}}</td>
+          <td>{{item.age}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-md-12">
+      <button type="button" class="btn btn-primary btn-round btn-min-width" (click)="downloadCSV(dataArr, 'data.csv')">Download CSV</button>
+    </div>
+  </div>
+</div>
+
